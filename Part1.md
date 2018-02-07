@@ -5,8 +5,8 @@
 
 **GitHub Names:**
 
-- Sam Cuthbertson (scuthbert)
-- Connor Hudson (technoboy10)
+- Sam Cuthbertson [(scuthbert)](https://github.com/scuthbert/)
+- Connor Hudson [(technoboy10)](https://github.com/technoboy10)
 
 **Title:** fcq.fun (FCQ browser)
 
