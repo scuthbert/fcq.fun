@@ -6,14 +6,13 @@
 **GitHub Names:**
 
 - Sam Cuthbertson (scuthbert)
-- Connor Hudson (technoboy01)
+- Connor Hudson (technoboy10)
 
-**Title:** fcq.fun
+**Title:** fcq.fun (FCQ browser)
 
 **Description:** A CU faculty course questionnaire viewer with improved readability, focused mainly on graphs. Limited to Boulder campus, initially limited to College of Engineering results. 
 
-**Actor:** User
-
+**Actor:** Student
 **Functionality:**
 
 1. User can search by professor name
