@@ -13,6 +13,7 @@
 **Description:** A CU faculty course questionnaire viewer with improved readability, focused mainly on graphs. Limited to Boulder campus, initially limited to College of Engineering results. 
 
 **Actor:** Student
+
 **Functionality:**
 
 1. User can search by professor name
