@@ -1,6 +1,6 @@
-1. **Team:** Samuel Cuthbertson (scuthbert), 
+1. **Team:** Samuel Cuthbertson (scuthbert),
 
-   ​	    Connor Hudson (technoboy10)
+           Connor Hudson (technoboy10)
 
 2. **Title:** fcq.fun
 
