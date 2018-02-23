@@ -22,7 +22,7 @@
 
    1.  **Use Case Overview:** 
 
-       ![fcq.fun use-case overview](./fcq.fun use-case overview.svg)
+       ![fcq.fun use-case overview](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/fcq.fun%20use-case%20overview.svg?sanitize=true)
 
    2. **Use Case Document(s):** Document how the system will support 2 major workflow tasks via use cases documents. (While your overall system may include many use cases, focus on two start-to-finish use cases of something commonly done in the system that requires quite a few steps to go through). Note: login, signup, and forgot password are not acceptable.
 
