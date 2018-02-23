@@ -8,7 +8,7 @@
 
    | ID     | Description                                                  |
    | ------ | ------------------------------------------------------------ |
-   | US-01  | As a user, I can search by professor name is the format (Lastname, Firstname) to see results of that professors FCQ results. |
+   | US-01  | As a user, I can search by lecturer name in the format (Lastname, Firstname) to see results of that professors FCQ results. |
    | US-02  | As a user, I can search by course code to see results of that course's FCQ results. |
    | US-03  | As a user, I want to see the following on a chart as results of a professor search: Instructor Overall, Instructor's Effectiveness, Availability, Instructor's Respect. |
    | US-04  | As a user, I want to see the the following on a chart as the results of a class search: Course Overall, Hours per Week, Challenge, How Much Learned. |
