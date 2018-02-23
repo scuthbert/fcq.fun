@@ -6,6 +6,16 @@
 
 4. **Project Requirements:** Based on the project summary, what are the requirements and responsibilities for your system? List the requirements and their associated responsibilities in this section. Be sure to break them down into small manageable separate requirements and label each one with a unique ID number. You can write the requirements in short sentences or in the Agile format.
 
+   | ID     | Description                                                  |
+   | ------ | ------------------------------------------------------------ |
+   | US-01  | As a user, I can search by professor name is the format (Lastname, Firstname) to see results of that professors FCQ results. |
+   | US-02  | As a user, I can search by course code to see results of that course's FCQ results. |
+   | US-03  | As a user, I want to see the following on a chart as results of a professor search: Instructor Overall, Instructor's Effectiveness, Availability, Instructor's Respect. |
+   | US-04  | As a user, I want to see the the following on a chart as the results of a class search: Course Overall, Hours per Week, Challenge, How Much Learned. |
+   | NFR-01 | <u>Platform Constraints</u>: The page should display the same across multiple browsers. |
+   | NFR-02 | <u>Reliability:</u> In the event of a failed database query, a user facing error page should appear. |
+   | NFR-03 | <u>Legal:</u> All code will be protected under the GNU-General Purpose license, hosted as LICENSE in the GitHub repository. |
+
 5. **Use Cases:** Provide the use case diagram as well as the use case documents.
 
    1.  **Use Case Overview:** Create a single overview use case diagram depicting the all of the use cases the actors interact with. Note that these should map back to your user requirements. Reference your Requirement ID number(s) from the table. You should have at least 2 per 4448 team member or 4 per 5448 member in your group at a minimum. 
