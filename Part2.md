@@ -4,7 +4,7 @@
 
 3. **Project Summary:** A CU faculty course questionnaire viewer with improved readability, focused mainly on graphs. Limited to Boulder campus, initially limited to College of Engineering results. 
 
-4. **Project Requirements:** Based on the project summary, what are the requirements and responsibilities for your system? List the requirements and their associated responsibilities in this section. Be sure to break them down into small manageable separate requirements and label each one with a unique ID number. You can write the requirements in short sentences or in the Agile format.
+4. **Project Requirements:**
 
    | ID     | Description                                                  |
    | ------ | ------------------------------------------------------------ |
@@ -12,14 +12,21 @@
    | US-02  | As a user, I can search by course code to see results of that course's FCQ results. |
    | US-03  | As a user, I want to see the following on a chart as results of a professor search: Instructor Overall, Instructor's Effectiveness, Availability, Instructor's Respect. |
    | US-04  | As a user, I want to see the the following on a chart as the results of a class search: Course Overall, Hours per Week, Challenge, How Much Learned. |
+   | FR-01  | Queries to the FCQ database should be limited to College of Engineering and Applied Science results. |
+   | FR-02  | Queries to the FCQ database should bound "First Term" as Fall 2006 and "Last Term" as Summer 2017. |
    | NFR-01 | <u>Platform Constraints</u>: The page should display the same across multiple browsers. |
    | NFR-02 | <u>Reliability:</u> In the event of a failed database query, a user facing error page should appear. |
    | NFR-03 | <u>Legal:</u> All code will be protected under the GNU-General Purpose license, hosted as LICENSE in the GitHub repository. |
 
-5. **Use Cases:** Provide the use case diagram as well as the use case documents.
+5. **Use Cases:** 
 
-   1.  **Use Case Overview:** Create a single overview use case diagram depicting the all of the use cases the actors interact with. Note that these should map back to your user requirements. Reference your Requirement ID number(s) from the table. You should have at least 2 per 4448 team member or 4 per 5448 member in your group at a minimum. 
+   1.  **Use Case Overview:** 
+
+       ![fcq.fun use-case overview](/home/sammo/Downloads/fcq.fun use-case overview.svg)
+
    2. **Use Case Document(s):** Document how the system will support 2 major workflow tasks via use cases documents. (While your overall system may include many use cases, focus on two start-to-finish use cases of something commonly done in the system that requires quite a few steps to go through). Note: login, signup, and forgot password are not acceptable.
+
+   ​
 
 6. **Activity Diagram**: Use the two major workflow tasks you outlined in the two Use Case documents and create a separate activity diagram for each that documents all of the possible paths through it.
 
