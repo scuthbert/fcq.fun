@@ -30,12 +30,9 @@
 
        ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US04.svg?sanitize=true)
 
-6. **Activity Diagram**: Use the two major workflow tasks you outlined in the two Use Case documents and create a separate activity diagram for each that documents all of the possible paths through it.
+6. **Activity Diagram**: 
 
-   1. _Note you must use UML 2.0 version with “swim lanes”.._
-   2. Label the diagram with the Requirement ID #, Use Case ID #, Use Case name (short description).
-   3. Make sure there is a system swim lane. When the system does something, make sure that is designated in the system swim lane!
-   4. These must match the use case documents you did.
+       ![fcq.fun US-01 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/ActivityDiagram-US01.svg?sanitize=true)
 
 7. **UI Mockups:** Create screen mockups for the user interface of various parts of your application.
 
