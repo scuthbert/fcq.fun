@@ -22,7 +22,7 @@
 
    1.  **Use Case Overview:** 
 
-       ![fcq.fun use-case overview](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/fcq.fun%20use-case%20overview.svg?sanitize=true)
+       ![fcq.fun use-case overview](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/UseCaseOverview.svg?sanitize=true)
 
    2. **Use Case Document(s):** 
 
