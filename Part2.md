@@ -30,6 +30,10 @@
 
        ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US01.svg?sanitize=true)
 
+       ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US04.pdf?sanitize=true)
+
+       ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US04.svg?sanitize=true)
+
 6. **Activity Diagram**: Use the two major workflow tasks you outlined in the two Use Case documents and create a separate activity diagram for each that documents all of the possible paths through it.
 
    1. _Note you must use UML 2.0 version with “swim lanes”.._
