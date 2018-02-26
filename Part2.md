@@ -26,7 +26,7 @@
 
    2. **Use Case Document(s):** 
 
-       ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US01.pdf)​
+       ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US01.pdf?sanitize=true)
 
 6. **Activity Diagram**: Use the two major workflow tasks you outlined in the two Use Case documents and create a separate activity diagram for each that documents all of the possible paths through it.
 
