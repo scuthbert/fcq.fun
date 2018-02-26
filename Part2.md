@@ -26,11 +26,7 @@
 
    2. **Use Case Document(s):** 
 
-       ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US01.pdf?sanitize=true)
-
        ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US01.svg?sanitize=true)
-
-       ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US04.pdf?sanitize=true)
 
        ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US04.svg?sanitize=true)
 
