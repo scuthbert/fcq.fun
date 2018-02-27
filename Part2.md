@@ -29,7 +29,7 @@
 
 6. **Activity Diagram**:
        ![fcq.fun US-01 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/ActivityDiagram-US01.svg?sanitize=true)
-       ![fcq.fun US-01 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/ActivityDiagram-US01.svg?sanitize=true)
+       ![fcq.fun US-04 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/ActivityDiagram-US04.svg?sanitize=true)
 
 7. **UI Mockups:** Create screen mockups for the user interface of various parts of your application.
 
