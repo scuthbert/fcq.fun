@@ -50,7 +50,7 @@
 
     ![fcq.fun US-01 Sequence Diagram 1](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US01-1.svg?sanitize=true)
     ![fcq.fun US-01 Sequence Diagram 2](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US01-2.svg?sanitize=true)
-   ​
+    ![fcq.fun US-04 Sequence Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US04.svg?sanitize=true)
 
 9. **Class Diagram:** Create a class diagram containing: what relationships the classes have, their attributes and (public) methods, what design patterns you may already know about are present in your design, etc. Be sure to show the visibility modifiers and relationships between the classes.
 
