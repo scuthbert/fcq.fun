@@ -24,7 +24,6 @@
        ![fcq.fun use-case overview](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/UseCaseOverview.svg?sanitize=true)
 
    2. **Use Case Document(s):** 
-   
        ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/US01.svg?sanitize=true)
        ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/US04.svg?sanitize=true)
 
@@ -41,14 +40,7 @@
 
    Note: it is okay to work on paper for this task and then scan in your work to include in your document. There are also free wire-framing tools online.
 
-8. **User Interactions:** Create 2 sequence diagrams. Use the use case documents and activity diagrams that you created as well as the UI mockups to show sequence diagrams of the objects that will participate in each use case interaction. Recall that sequence diagrams do not contain conditional constructs, so be sure to clearly describe the interaction that is being displayed in the sequence diagram. If you find yourself needing to show an if-else situation, simply create two sequence diagrams, one that shows the true branch and one that shows the false branch.
-
-   1. Label each sequence diagram with the Requirement ID #, Use Case ID #, and Use Case short description.
-   2. These must match the use case documents/activity diagrams you did.
-   3. Make sure all classes in your Sequence Diagrams are also represented in your class diagram.
-   4. Make sure all messages (method calls) shown in your Sequence Diagrams are also represented in your class diagram. Make sure you show the actor and the action that triggers the start of each use case, as well as any time the user interacts within the use case.
-   5. List the actor steps (from use case document) to the left of the diagram and ensure the steps match the sequence diagram (See slides for an example).
-
+8. **User Interactions:** 
     ![fcq.fun US-01 Sequence Diagram 1](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US01-1.svg?sanitize=true)
     ![fcq.fun US-01 Sequence Diagram 2](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US01-2.svg?sanitize=true)
     ![fcq.fun US-04 Sequence Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US04.svg?sanitize=true)
