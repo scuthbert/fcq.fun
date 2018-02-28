@@ -21,15 +21,15 @@
 5. **Use Cases:** 
 
    1.  **Use Case Overview:** 
-       ![fcq.fun use-case overview](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/UseCaseOverview.svg?sanitize=true)
+       ![fcq.fun use-case overview](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/UseCaseOverview.svg?sanitize=true)
 
    2. **Use Case Document(s):** 
-       ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US01.svg?sanitize=true)
-       ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/US04.svg?sanitize=true)
+       ![fcq.fun US-01 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/US01.svg?sanitize=true)
+       ![fcq.fun US-04 Document](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/US04.svg?sanitize=true)
 
 6. **Activity Diagram**:
-       ![fcq.fun US-01 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/ActivityDiagram-US01.svg?sanitize=true)
-       ![fcq.fun US-04 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/ActivityDiagram-US04.svg?sanitize=true)
+       ![fcq.fun US-01 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/ActivityDiagram-US01.svg?sanitize=true)
+       ![fcq.fun US-04 Activity Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/ActivityDiagram-US04.svg?sanitize=true)
 
 7. **UI Mockups:** Create screen mockups for the user interface of various parts of your application.
 
@@ -48,9 +48,9 @@
    4. Make sure all messages (method calls) shown in your Sequence Diagrams are also represented in your class diagram. Make sure you show the actor and the action that triggers the start of each use case, as well as any time the user interacts within the use case.
    5. List the actor steps (from use case document) to the left of the diagram and ensure the steps match the sequence diagram (See slides for an example).
 
-    ![fcq.fun US-01 Sequence Diagram 1](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US01-1.svg?sanitize=true)
-    ![fcq.fun US-01 Sequence Diagram 2](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US01-2.svg?sanitize=true)
-    ![fcq.fun US-04 Sequence Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US04.svg?sanitize=true)
+    ![fcq.fun US-01 Sequence Diagram 1](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US01-1.svg?sanitize=true)
+    ![fcq.fun US-01 Sequence Diagram 2](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US01-2.svg?sanitize=true)
+    ![fcq.fun US-04 Sequence Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US04.svg?sanitize=true)
 
 9. **Class Diagram:** Create a class diagram containing: what relationships the classes have, their attributes and (public) methods, what design patterns you may already know about are present in your design, etc. Be sure to show the visibility modifiers and relationships between the classes.
 
