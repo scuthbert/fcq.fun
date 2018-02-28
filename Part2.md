@@ -48,6 +48,10 @@
    4. Make sure all messages (method calls) shown in your Sequence Diagrams are also represented in your class diagram. Make sure you show the actor and the action that triggers the start of each use case, as well as any time the user interacts within the use case.
    5. List the actor steps (from use case document) to the left of the diagram and ensure the steps match the sequence diagram (See slides for an example).
 
+    ![fcq.fun US-01 Sequence Diagram 1](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US01-1.svg?sanitize=true)
+    ![fcq.fun US-01 Sequence Diagram 2](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/SequenceDiagram-US01-2.svg?sanitize=true)
+   ​
+
 9. **Class Diagram:** Create a class diagram containing: what relationships the classes have, their attributes and (public) methods, what design patterns you may already know about are present in your design, etc. Be sure to show the visibility modifiers and relationships between the classes.
 
    1. Focus your class diagram on the classes you need to create. For classes from Java or another library: You can specify an inheritance or composition relationship if it helps but do not put all the attributes/behaviors of the framework classes into the diagram. For example, If I was using Java Swing I could simply specify “submitBtn : JButton” as an attribute in one of my classes without drawing the JButton class. If I want to make use of Java’s Observer interface, I may draw the Observer interface in the class diagram to show a class implements it.
