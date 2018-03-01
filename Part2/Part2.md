@@ -33,14 +33,7 @@
 
 7. **UI Mockups:** Create screen mockups for the user interface of various parts of your application.
 
-   1. What will a user see as they work through the tasks identified in your use cases?
-   2. What is the overall organization of your user interface?
-   3. How will data be displayed?
-   4. How will the user navigate from screen to screen?
-
    ![fcq.fun UI Mockups](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/UIMockup2.png?sanitize=true)
-
-   Note: it is okay to work on paper for this task and then scan in your work to include in your document. There are also free wire-framing tools online.
 
 8. **User Interactions:** 
     ![fcq.fun US-01 Sequence Diagram 1](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US01-1.svg?sanitize=true)
@@ -49,14 +42,3 @@
 
 9. **Class Diagram:**
     ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/ClassDiagram.svg?sanitize=true)
-
-**How to Scope** 
-
-While I have asked for a non-trivial amount of information above, you should only
-generate the information you need to achieve your desired functionality given the
-size of your team. Each member of your group should expect to work on one to two
-use cases (possibly with other teammates). A 5-person team is looking at 10-20 use
-cases (2-person 5448 team 8 use cases), although I would be surprised if any team
-identifies 20 tasks that their system can perform. Use these guidelines to scope the
-work of this project part and really focus on generating information that will guide
-your implementation efforts.
