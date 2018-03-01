@@ -38,7 +38,7 @@
    3. How will data be displayed?
    4. How will the user navigate from screen to screen?
 
-   ![fcq.fun UI Mockups](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/UIMockup.png?sanitize=true)
+   ![fcq.fun UI Mockups](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/UIMockup2.png?sanitize=true)
 
    Note: it is okay to work on paper for this task and then scan in your work to include in your document. There are also free wire-framing tools online.
 
