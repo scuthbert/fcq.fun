@@ -45,12 +45,8 @@
     ![fcq.fun US-01 Sequence Diagram 2](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US01-2.svg?sanitize=true)
     ![fcq.fun US-04 Sequence Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/SequenceDiagram-US04.svg?sanitize=true)
 
-9. **Class Diagram:** Create a class diagram containing: what relationships the classes have, their attributes and (public) methods, what design patterns you may already know about are present in your design, etc. Be sure to show the visibility modifiers and relationships between the classes.
-
-   1. Focus your class diagram on the classes you need to create. For classes from Java or another library: You can specify an inheritance or composition relationship if it helps but do not put all the attributes/behaviors of the framework classes into the diagram. For example, If I was using Java Swing I could simply specify “submitBtn : JButton” as an attribute in one of my classes without drawing the JButton class. If I want to make use of Java’s Observer interface, I may draw the Observer interface in the class diagram to show a class implements it.
-   2. Show all classes you are coding, including attributes, methods, visibility modifiers, relationships to other classes. 
-   3. Show relationships between all classes. No floating classes.
-   4. Make sure all classes appear in your class diagram from all sequence diagrams. Make sure all method calls from your sequence diagrams appear in your class diagram.
+9. **Class Diagram:**
+    ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part2/ClassDiagram.svg?sanitize=true)
 
 **How to Scope** 
 
