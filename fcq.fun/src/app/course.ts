@@ -17,4 +17,21 @@ export class Course implements Plottable {
     public getCourseCode(): string {
         return this.courseCode;
     }
+
+    public getFieldData(fieldName: string) {
+        let foundField = this.fieldList.find((field: Field) => field.getName() === fieldName);
+        if (foundField) {
+            return foundField.getValues();
+        } else {
+            throw new Error("No field was found for the provided name");
+        }
+    }
+
+    public getFieldList() {
+        return this.fieldList;
+    }
+
+    public getValid() {
+        return this.valid;
+    }
 }
