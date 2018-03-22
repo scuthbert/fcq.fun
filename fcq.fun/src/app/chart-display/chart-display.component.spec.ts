@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ChartDisplayComponent } from './chart-display.component';
+import { ChartDisplayComponent } from "./chart-display.component";
 
-describe('ChartDisplayComponent', () => {
+describe("ChartDisplayComponent", () => {
   let component: ChartDisplayComponent;
   let fixture: ComponentFixture<ChartDisplayComponent>;
 
@@ -19,7 +19,7 @@ describe('ChartDisplayComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

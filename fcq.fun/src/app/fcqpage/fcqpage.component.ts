@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { Lecturer } from '../lecturer';
-import { Plottable } from '../plottable';
-import { DataStore } from '../data-store';
-import { LocalDataCache } from '../local-data-cache';
+import { Lecturer } from "../lecturer";
+import { Plottable } from "../plottable";
+import { DataStore } from "../data-store";
+import { LocalDataCache } from "../local-data-cache";
 
 @Component({
-  selector: 'app-fcqpage',
-  templateUrl: './fcqpage.component.html',
-  styleUrls: ['./fcqpage.component.css']
+  selector: "app-fcqpage",
+  templateUrl: "./fcqpage.component.html",
+  styleUrls: ["./fcqpage.component.css"]
 })
 
 export class FCQPageComponent implements OnInit {

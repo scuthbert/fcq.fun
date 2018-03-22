@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FCQPageComponent } from './fcqpage.component';
+import { FCQPageComponent } from "./fcqpage.component";
 
-describe('FCQPageComponent', () => {
+describe("FCQPageComponent", () => {
   let component: FCQPageComponent;
   let fixture: ComponentFixture<FCQPageComponent>;
 
@@ -19,7 +19,7 @@ describe('FCQPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
