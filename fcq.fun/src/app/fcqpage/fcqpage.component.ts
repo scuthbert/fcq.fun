@@ -12,12 +12,7 @@ export class FCQPageComponent implements OnInit {
   title: string = "DEFAULT";
   currentQuery: Plottable;
 
-  getLecName(): string {
-    var lec = new Lecturer();
-    return lec.Name;
-  }
-
-  search(name: string): void {
+  public search(name: string): void {
     //TODO: Search for String
   }
 
