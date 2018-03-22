@@ -10,7 +10,7 @@
 7. **Breakdown of Work:**
   Connor: Revised class diagram, coded Field, Course, and Lecturer. 
   Sam: Created 'implemented classes diagram', coded FCQPage and Plottable, as well as setup initial Angular app.
-8. **GitHub Graph:![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part3/GitHubGraph.png)**
+8. **GitHub Graph**:![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part3/GitHubGraph.png)
 
 
 9. **Estimate Remaining Effort:**
