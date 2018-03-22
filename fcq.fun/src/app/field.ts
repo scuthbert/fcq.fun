@@ -15,11 +15,19 @@ export class Field {
     }
 
     public setValues(values: number[]): void {
-        this.values = values;
+        if (values.every((value: number) => value <= 6 && value >= 1)) {
+            this.values = values;
+        } else {
+            throw new Error("Not all values are valid FCQ scores");
+        }
     }
 
     public appendValue(newValue: number): void {
-        this.values.push(newValue);
+        if (newValue <= 6 && newValue >= 1) { // FCQ values MUST be in the range [1,6]
+            this.values.push(newValue);
+        } else {
+            throw new Error("Given value is not a valid FCQ score");
+        }
     }
 
     public setName(newName: string): void {
