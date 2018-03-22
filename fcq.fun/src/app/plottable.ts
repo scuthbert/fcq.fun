@@ -1,7 +1,7 @@
-import { Field } from './field';
+import { Field } from "./field";
 
 export interface Plottable {
-  public getFieldData(field: Field): number[];
-  public getFieldList(): Field[];
-  public getValid(): boolean;
+  getFieldData(field: Field): number[];
+  getFieldList(): Field[];
+  getValid(): boolean;
 }
