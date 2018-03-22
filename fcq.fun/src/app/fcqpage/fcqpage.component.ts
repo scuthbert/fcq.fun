@@ -12,16 +12,16 @@ import { LocalDataCache } from '../local-data-cache';
 })
 
 export class FCQPageComponent implements OnInit {
-  title: string = "DEFAULT";
+  title = "DEFAULT";
   currentQuery: Plottable;
   dataInterface: DataStore;
 
   public search(name: string): void {
-    //TODO: Search for String
+    // TODO: Search for String
   }
 
   constructor() {
-    dataInterface = new LocalDataCache();
+    this.dataInterface = new LocalDataCache();
   }
 
   ngOnInit() {}
