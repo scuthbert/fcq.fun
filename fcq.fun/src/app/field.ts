@@ -15,7 +15,7 @@ export class Field {
     }
 
     public setValues(values: number[]): void {
-        if (values.every((value: number) => value <= 6 && value >= 1)) {
+        if (values.every((value: number) => value <= 6 && value >= 1)) { // All FCQ values MUST be in the range [1,6]
             this.values = values;
         } else {
             throw new Error("Not all values are valid FCQ scores");
