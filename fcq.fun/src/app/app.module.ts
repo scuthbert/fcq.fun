@@ -1,18 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
-import { AppComponent } from './app.component';
+import { FCQPageComponent } from './fcqpage/fcqpage.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    FCQPageComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [FCQPageComponent]
 })
 export class AppModule { }
