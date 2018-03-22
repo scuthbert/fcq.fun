@@ -6,8 +6,9 @@ export class Lecturer implements Plottable {
   private fieldList: Field[];
   private valid: boolean;
 
-  public constructor(name: string) {
+  public constructor(name: string, fields: Field[]) {
     this.name = name;
+    this.fieldList = fields;
   }
 
   public getLecturerName(): string {
