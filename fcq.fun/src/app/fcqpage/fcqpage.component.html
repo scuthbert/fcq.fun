@@ -1,10 +1,5 @@
-<div [formGroup]="queryForm">
-<input id="inst" class="form-control"
-       formControlName="inst" required >
-
-<div *ngIf="name.invalid && (name.dirty || name.touched)"
-     class="alert alert-danger">
-</div>
+<input #searchBox (keyup.enter)="search(searchBox.value)">
+<button (click)="search(searchBox.value)"> SEARCH </button>
 <!--button (click)="search(searchBox.value)">
   Click me!
   <input #searchBox (keyup.enter)="search(searchBox.value)" >

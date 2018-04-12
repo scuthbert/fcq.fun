@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 import { Lecturer } from "../lecturer";
 import { Plottable } from "../plottable";
@@ -18,32 +18,30 @@ import { HttpClient  } from '@angular/common/http';
 })
 
 export class FCQPageComponent implements OnInit {
-  title = "THIGH MINIONS";
+  title = "fcq.fun";
   currentQuery: Plottable;
   dataInterface: DataStore;
   queryForm: FormGroup;
+
   query: Query;
 
   public search(name: string): void {
     // TODO: Search for String
-    if(name != null){
-      this.dataInterface.getPlottable(name);
-    }
+    this.query.instructor = name;
+    console.log(this.query.instructor)
+    this.dataInterface.getPlottable(this.query.instructor);
+
   }
 
   constructor(private http: HttpClient, private fb: FormBuilder) {
     this.dataInterface = new HTTPRequestor(http);
-
+    this.query = new Query();
   }
 
 
   ngOnInit(): void {
-    this.query = new Query();
-
-    this.queryForm = new FormGroup({
-      'inst': new FormControl(this.query.instructor, [
-        Validators.required
-      ])
+    this.queryForm = this.fb.group({
+      inst: '' // this.query.instructor
       //'subj': new FormControl(this.query.subject, Validators.required),
       //'cour': new FormControl(this.query.courseCode, Validators.required)
     });
