@@ -1,12 +1,14 @@
+import { DataPoint } from "./data-point";
+
 export class Field {
-    private values: number[];
+    private values: DataPoint[];
     private name: string;
 
     public constructor(name: string) {
         this.name = name;
     }
 
-    public getValues(): number[] {
+    public getValues(): DataPoint[] {
         return this.values;
     }
 
@@ -14,20 +16,12 @@ export class Field {
         return this.name;
     }
 
-    public setValues(values: number[]): void {
-        if (values.every((value: number) => value <= 6 && value >= 1)) { // All FCQ values MUST be in the range [1,6]
-            this.values = values;
-        } else {
-            throw new Error("Not all values are valid FCQ scores");
-        }
+    public setValues(values: DataPoint[]): void {
+        this.values = values; // Validation in DataPoint constructor
     }
 
-    public appendValue(newValue: number): void {
-        if (newValue <= 6 && newValue >= 1) { // FCQ values MUST be in the range [1,6]
-            this.values.push(newValue);
-        } else {
-            throw new Error("Given value is not a valid FCQ score");
-        }
+    public appendValue(newValue: DataPoint): void {
+        this.values.push(newValue); // Validation in DataPoint constructor
     }
 
     public setName(newName: string): void {
