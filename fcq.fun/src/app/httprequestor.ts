@@ -35,7 +35,6 @@ export class HTTPRequestor implements DataStore {
     }
 
     const wb: XLSX.WorkBook = XLSX.read(binary, {type: 'binary'});
-
 		/* grab data sheet */
 		const wsname: string = wb.SheetNames[1];
 		const ws: XLSX.WorkSheet = wb.Sheets[wsname];
