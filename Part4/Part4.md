@@ -10,7 +10,11 @@
 
     ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/RevisedClassDiagramV2.svg?sanitize=true)
 
-5. **Class Diagram of Implemented Classes:** ![fcq.fun Implemented Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/ImplementedClassDiagram.svg?sanitize=true)
+5. **Class Diagram of Implemented Classes:** 
+    
+    This is deceivingly the same class diagram as above, since we have all the function signatures in code. However, some signifigant functionality is lacking.
+    
+    ![fcq.fun Implemented Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/RevisedClassDiagramV2.svg?sanitize=true)
 
 6. **Summary:**
   Since last iteration, we have created a backend server to handle fetching of FCQ data and started connecting this to the HTTPRequestor class (and by extension, the LocalDataCache class). We ran into serious issues relating to how TypeScript handles HTTP requests and asynchronous results, so the implementation is not complete yet. We also implemented a significant portion of the ChartDisplay class, adding a DataPoint class in the process, to provide the needed data to the `ChartDisplay.display()` function without hacky workarounds. We also changed the relationship from FCQPage to ChartDisplay from a 1-1 to a 1-Many, as part of supporting multiple results from a singe search (i.e. a search for "Liz" should return multiple professors).  
