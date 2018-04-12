@@ -1,4 +1,5 @@
 import { Field } from "./field";
+import { DataPoint } from "./data-point";
 
 describe("Field", () => {
     let field: Field;
@@ -12,21 +13,34 @@ describe("Field", () => {
     });
 
     it("should be able to set a list of values", () => {
-        field.setValues([1, 2, 3, 4, 5]);
-        expect(field.getValues()).toEqual([1, 2, 3, 4, 5]);
-    });
-
-    it("should validate set data properly", () => {
-        expect(field.setValues.bind(null, [1.1, 2.2, 3.3, 100])).toThrow();
+        field.setValues([
+            new DataPoint(1, "2018-07"),
+            new DataPoint(2, "2018-07"),
+            new DataPoint(3, "2018-07"),
+            new DataPoint(4, "2018-07")
+        ]);
+        expect(field.getValues()).toEqual([
+            new DataPoint(1, "2018-07"),
+            new DataPoint(2, "2018-07"),
+            new DataPoint(3, "2018-07"),
+            new DataPoint(4, "2018-07")
+        ]);
     });
 
     it("should append data to end of list", () => {
-        field.setValues([1, 2, 3, 4]);
-        field.appendValue(5);
-        expect(field.getValues()).toEqual([1, 2, 3, 4, 5]);
-    });
-
-    it("should validate appended data properly", () => {
-        expect(field.appendValue.bind(null, 7)).toThrow();
+        field.setValues([
+            new DataPoint(1, "2018-07"),
+            new DataPoint(2, "2018-07"),
+            new DataPoint(3, "2018-07"),
+            new DataPoint(4, "2018-07")
+        ]);
+        field.appendValue(new DataPoint(5, "2018-07"));
+        expect(field.getValues()).toEqual([
+            new DataPoint(1, "2018-07"),
+            new DataPoint(2, "2018-07"),
+            new DataPoint(3, "2018-07"),
+            new DataPoint(4, "2018-07"),
+            new DataPoint(5, "2018-07")
+        ]);
     });
 });

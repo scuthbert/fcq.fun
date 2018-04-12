@@ -4,7 +4,7 @@ describe("Lecturer", () => {
     let lecturer: Lecturer;
 
     beforeEach(() => {
-      lecturer = new Lecturer("Test Name");
+      lecturer = new Lecturer("Test Name", []);
     });
 
     afterEach(() => {

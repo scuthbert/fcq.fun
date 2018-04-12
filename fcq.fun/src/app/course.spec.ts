@@ -4,7 +4,7 @@ describe("Course", () => {
     let course: Course;
 
     beforeEach(() => {
-      course = new Course("CSCI4448");
+      course = new Course("CSCI4448", []);
     });
 
     afterEach(() => {
@@ -17,7 +17,7 @@ describe("Course", () => {
 
     it("should throw on invalid course code", () => {
         expect(function() {
-          let trash: Course = new Course("Garbage");
+          let trash: Course = new Course("Garbage", []);
         }).toThrow();
     });
 
