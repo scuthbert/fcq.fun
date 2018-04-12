@@ -33,7 +33,7 @@ export class ChartDisplayComponent implements OnChanges {
       });
     });
 
-    Plotly.react("data-chart", traces);
+    Plotly.react(this.currentResult.getLabel(), traces);
   }
 
   ngOnChanges(changes: SimpleChanges) {
