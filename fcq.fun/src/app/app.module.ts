@@ -4,7 +4,7 @@ import { NgModule } from "@angular/core";
 
 import { FCQPageComponent } from "./fcqpage/fcqpage.component";
 import { ChartDisplayComponent } from "./chart-display/chart-display.component";
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import { ChartDisplayComponent } from "./chart-display/chart-display.component";
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [FCQPageComponent]
