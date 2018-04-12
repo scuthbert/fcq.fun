@@ -2,7 +2,7 @@
 2. **Title:** fcq.fun
 3. **Project Summary:** A CU faculty course questionnaire viewer with improved readability, focused mainly on graphs. Limited to Boulder campus, initially limited to College of Engineering results.
 4. **Revised Class Diagram:**
-    ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/RevisedClassDiagram.svg?sanitize=true)
+    ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/RevisedClassDiagramV2.svg?sanitize=true)
 5. **Class Diagram of Implemented Classes:** ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/ImplementedClassDiagram.svg?sanitize=true)
 6. **Summary:**
   Since last iteration, we have created a backend server to handle fetching of FCQ data and connected this to the HTTPRequestor class (and by extension, the LocalDataCache class). We also implemented a significant portion of the ChartDisplay class, adding a DataPoint class in the process, to provide the needed data to the `ChartDisplay.display()` function without hacky workarounds. 
