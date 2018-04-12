@@ -11,9 +11,9 @@
     ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/RevisedClassDiagramV2.svg?sanitize=true)
 
 5. **Class Diagram of Implemented Classes:** 
-    
-    This is deceivingly the same class diagram as above, since we have all the function signatures in code. However, some signifigant functionality is lacking.
-    
+
+    This is deceivingly the same class diagram as above, since we have all the function signatures in code. However, some significant functionality is yet lacking and will be discussed below.
+
     ![fcq.fun Implemented Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part4/RevisedClassDiagramV2.svg?sanitize=true)
 
 6. **Summary:**
