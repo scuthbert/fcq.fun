@@ -23,5 +23,9 @@
 
 
 9. **Estimate Remaining Effort:**
-  ​
-10. **Next Iteration:** 
+
+10. **Design Patterns**
+
+  In our system, we prominently use the Proxy design pattern for our data fetching code​
+
+11. **Next Iteration:** 
