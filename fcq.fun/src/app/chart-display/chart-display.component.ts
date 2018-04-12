@@ -28,7 +28,8 @@ export class ChartDisplayComponent implements OnChanges {
         mode: "lines+markers",
         type: "scatter",
         line: {shape: "spline"},
-        y: data.getFieldData(field)
+        x: data.getFieldData(field).map(point => point.getTerm()),
+        y: data.getFieldData(field).map(point => point.getValue())
       });
     });
 
@@ -36,7 +37,6 @@ export class ChartDisplayComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    // this.display(changes["CurrentResult"].currentValue);
     this.display(this.currentResult);
   }
 
