@@ -31,4 +31,8 @@ export class Lecturer implements Plottable {
   public getValid() {
     return this.valid;
   }
+
+  public getLabel() {
+    return this.getLecturerName();
+  }
 }

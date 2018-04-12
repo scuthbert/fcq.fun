@@ -35,4 +35,8 @@ export class Course implements Plottable {
     public getValid() {
         return this.valid;
     }
+
+    public getLabel() {
+        return this.getCourseCode();
+    }
 }

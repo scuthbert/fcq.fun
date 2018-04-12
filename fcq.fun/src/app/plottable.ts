@@ -5,4 +5,5 @@ export interface Plottable {
   getFieldData(fieldName: string): DataPoint[];
   getFieldList(): Field[];
   getValid(): boolean;
+  getLabel(): string;
 }
