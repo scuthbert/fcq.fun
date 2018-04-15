@@ -29,7 +29,9 @@ export class FCQPageComponent implements OnInit {
     // TODO: Search for String
     this.query.instructor = name;
     console.log(this.query.instructor)
-    this.dataInterface.getPlottable(this.query.instructor);
+    this.dataInterface.getPlottable(this.query.instructor).subscribe(data => {
+      console.log(data)
+    })
 
   }
 
