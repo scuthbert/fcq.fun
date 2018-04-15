@@ -21,6 +21,12 @@ export class ChartDisplayComponent implements OnChanges {
   }
 
   public display(data: Plottable): void {
+    this.currentResult = data;
+    this.currentFields = [];
+    data.getFieldList().forEach((value, index, arr) => {
+      this.currentFields.push(value.getName())
+    }); // TODO: UNDO THIS
+
     let traces: {}[];
     this.currentFields.forEach(field => {
       traces.push({

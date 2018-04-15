@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, ComponentFactoryResolver, ViewContainerRef } from "@angular/core";
 
 import { Lecturer } from "../lecturer";
 import { Plottable } from "../plottable";
@@ -8,6 +8,7 @@ import { HTTPRequestor } from "../httprequestor";
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { HttpClient  } from '@angular/common/http';
+import { ChartDisplayComponent } from "../chart-display/chart-display.component";
 
 
 @Component({
@@ -30,12 +31,19 @@ export class FCQPageComponent implements OnInit {
     this.query.instructor = name;
     console.log(this.query.instructor)
     this.dataInterface.getPlottable(this.query.instructor).subscribe(data => {
+      // Open ChartDisplay on this data
       console.log(data)
+      let factory = this.cmpFactResolve.resolveComponentFactory(ChartDisplayComponent);
+      let component = this.viewContainer.createComponent(factory);
+      component.instance.display(data[0])
     })
 
   }
 
-  constructor(private http: HttpClient, private fb: FormBuilder) {
+  constructor(private http: HttpClient, 
+              private fb: FormBuilder, 
+              private cmpFactResolve: ComponentFactoryResolver, 
+              private viewContainer: ViewContainerRef) {
     this.dataInterface = new HTTPRequestor(http);
     this.query = new Query();
   }

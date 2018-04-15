@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
+  entryComponents: [ChartDisplayComponent],
   providers: [],
   bootstrap: [FCQPageComponent]
 })
