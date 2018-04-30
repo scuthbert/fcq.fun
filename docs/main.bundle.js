@@ -531,22 +531,42 @@ var HTTPRequestor = /** @class */ (function () {
         var lecturers = [];
         if (this.courseSearch) {
             courses.forEach(function (fields, key) {
-                var lec = new __WEBPACK_IMPORTED_MODULE_5__course__["a" /* Course */](key, fields);
-                lecturers.push(lec);
+                try {
+                    var lec = new __WEBPACK_IMPORTED_MODULE_5__course__["a" /* Course */](key, fields);
+                    lecturers.push(lec);
+                }
+                catch (_a) {
+                    console.log("Error with " + key + " and " + fields);
+                }
             });
             plottables.forEach(function (fields, key) {
-                var lec = new __WEBPACK_IMPORTED_MODULE_0__lecturer__["a" /* Lecturer */](key, fields);
-                lecturers.push(lec);
+                try {
+                    var lec = new __WEBPACK_IMPORTED_MODULE_0__lecturer__["a" /* Lecturer */](key, fields);
+                    lecturers.push(lec);
+                }
+                catch (_a) {
+                    console.log("Error with " + key + " and " + fields);
+                }
             });
         }
         else {
             plottables.forEach(function (fields, key) {
-                var lec = new __WEBPACK_IMPORTED_MODULE_0__lecturer__["a" /* Lecturer */](key, fields);
-                lecturers.push(lec);
+                try {
+                    var lec = new __WEBPACK_IMPORTED_MODULE_0__lecturer__["a" /* Lecturer */](key, fields);
+                    lecturers.push(lec);
+                }
+                catch (_a) {
+                    console.log("Error with " + key + " and " + fields);
+                }
             });
             courses.forEach(function (fields, key) {
-                var lec = new __WEBPACK_IMPORTED_MODULE_5__course__["a" /* Course */](key, fields);
-                lecturers.push(lec);
+                try {
+                    var lec = new __WEBPACK_IMPORTED_MODULE_5__course__["a" /* Course */](key, fields);
+                    lecturers.push(lec);
+                }
+                catch (_a) {
+                    console.log("Error with " + key + " and " + fields);
+                }
             });
         }
         return lecturers;
