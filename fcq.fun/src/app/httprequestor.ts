@@ -13,18 +13,26 @@ import { Course } from "./course";
 type AOA = any[][];
 
 export class HTTPRequestor implements DataStore {
+  private courseSearch = false;
   constructor(private http: HttpClient) { }
 
   public getPlottable(name: string): Observable<Plottable[]> {
     // Regex match - Is term a professor or class code?
-    console.log("Searching for instructor: " + name);
-
-    // Pull up the FCQ site and print out the first form
-    return this.http.get("https://cors-anywhere.herokuapp.com/https://a2y9euj5ml.execute-api.us-east-2.amazonaws.com/prod/fcq-fetcher?instructor=" + name) // tslint:disable-line max-line-length
+    if(name.match(/^[a-z]{4}\d{4}$/i)) {
+      this.courseSearch = true;
+      console.log("Searching for course: " + name);
+      return this.http.get("https://cors-anywhere.herokuapp.com/https://a2y9euj5ml.execute-api.us-east-2.amazonaws.com/prod/fcq-fetcher?courseCode=" + name.substr(4, 4) + "&courseDept=" + name.substr(0, 4)) // tslint:disable-line max-line-length
+      .pipe(mergeMap(
+          data => this.getXLS(data as string)
+      ));
+    } else {
+      this.courseSearch = false;
+      console.log("Searching for instructor: " + name);
+      return this.http.get("https://cors-anywhere.herokuapp.com/https://a2y9euj5ml.execute-api.us-east-2.amazonaws.com/prod/fcq-fetcher?instructor=" + name) // tslint:disable-line max-line-length
       .pipe(mergeMap(
           data => this.getXLS(data as string)
         ));
-
+      }
   }
 
   private getXLS(url: string): Observable<Plottable[]> {
@@ -128,16 +136,31 @@ export class HTTPRequestor implements DataStore {
 
     let lecturers: Plottable[] = [];
 
-    plottables.forEach((fields, key) => {
-      let lec: Lecturer = new Lecturer(key, fields);
-      lecturers.push(lec);
-    });
+    if(this.courseSearch) {
+      courses.forEach((fields, key) => {
+        let lec: Course = new Course(key, fields);
+        lecturers.push(lec);
+      });
+
+      plottables.forEach((fields, key) => {
+        let lec: Lecturer = new Lecturer(key, fields);
+        lecturers.push(lec);
+      });
+    } else {
+      plottables.forEach((fields, key) => {
+        let lec: Lecturer = new Lecturer(key, fields);
+        lecturers.push(lec);
+      });
+
+      courses.forEach((fields, key) => {
+        let lec: Course = new Course(key, fields);
+        lecturers.push(lec);
+      });
+    }
+
 
     // TODO: Check if search was for course
-    courses.forEach((fields, key) => {
-      let lec: Course = new Course(key, fields);
-      lecturers.push(lec);
-    });
+
 
     return lecturers;
   }
