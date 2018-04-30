@@ -5,11 +5,13 @@ import { NgModule } from "@angular/core";
 import { FCQPageComponent } from "./fcqpage/fcqpage.component";
 import { ChartDisplayComponent } from "./chart-display/chart-display.component";
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChartDirective } from './chart.directive';
 
 @NgModule({
   declarations: [
     FCQPageComponent,
-    ChartDisplayComponent
+    ChartDisplayComponent,
+    ChartDirective
   ],
   imports: [
     BrowserModule,
