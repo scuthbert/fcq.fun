@@ -157,11 +157,7 @@ export class HTTPRequestor implements DataStore {
         lecturers.push(lec);
       });
     }
-
-
-    // TODO: Check if search was for course
-
-
+    
     return lecturers;
   }
 }
