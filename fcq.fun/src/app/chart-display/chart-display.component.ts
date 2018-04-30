@@ -57,7 +57,7 @@ export class ChartDisplayComponent implements OnChanges, AfterViewInit {
     };
 
     if (this.viewReady) {
-      Plotly.react(this.currentResult.getLabel(), traces, layout);
+      Plotly.react(this.currentResult.getLabel(), traces, layout, {displayModeBar: false});
     }
   }
 
