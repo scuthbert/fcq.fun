@@ -78,7 +78,6 @@ export class HTTPRequestor implements DataStore {
       let crseHrWek: DataPoint = new DataPoint(/* map from string raw_data[line]["HoursPerWkInclClass"] */ 3, term);
       let crseOvera: DataPoint = new DataPoint(raw_data[line]["CourseOverall"], term);
 
-
       // Test if this lecturer already exists/if this class already exists
       let key = raw_data[line]["Instructor"];
       if (plottables.has(key)) {
@@ -138,23 +137,39 @@ export class HTTPRequestor implements DataStore {
 
     if(this.courseSearch) {
       courses.forEach((fields, key) => {
-        let lec: Course = new Course(key, fields);
-        lecturers.push(lec);
+        try {
+          let lec: Course = new Course(key, fields);
+          lecturers.push(lec);
+        } catch {
+          console.log("Error with " + key + " and " + fields);
+        }
       });
 
       plottables.forEach((fields, key) => {
-        let lec: Lecturer = new Lecturer(key, fields);
-        lecturers.push(lec);
+        try {
+          let lec: Lecturer = new Lecturer(key, fields);
+          lecturers.push(lec);
+        } catch {
+          console.log("Error with " + key + " and " + fields);
+        }
       });
     } else {
       plottables.forEach((fields, key) => {
-        let lec: Lecturer = new Lecturer(key, fields);
-        lecturers.push(lec);
+        try {
+          let lec: Lecturer = new Lecturer(key, fields);
+          lecturers.push(lec);
+        } catch {
+          console.log("Error with " + key + " and " + fields);
+        }
       });
 
       courses.forEach((fields, key) => {
-        let lec: Course = new Course(key, fields);
-        lecturers.push(lec);
+        try {
+          let lec: Course = new Course(key, fields);
+          lecturers.push(lec);
+        } catch {
+          console.log("Error with " + key + " and " + fields);
+        }
       });
     }
     
