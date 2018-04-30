@@ -1,7 +1,7 @@
-import { Directive, ViewContainerRef } from '@angular/core';
+import { Directive, ViewContainerRef } from "@angular/core";
 
 @Directive({
-  selector: '[chart-host]'
+  selector: "[appChartHost]"
 })
 export class ChartDirective {
 

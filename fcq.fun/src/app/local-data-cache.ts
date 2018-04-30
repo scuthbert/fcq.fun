@@ -16,7 +16,7 @@ export class LocalDataCache implements DataStore {
       });
       return observ;
     } if (result != null) {
-      return Observable.of(this.plottables[name])
+      return Observable.of(this.plottables[name]);
     }
   }
 

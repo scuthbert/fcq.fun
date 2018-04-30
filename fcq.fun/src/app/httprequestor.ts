@@ -1,10 +1,10 @@
-import { DataStore } from "./data-store"
-import { Plottable } from "./plottable"
-import { Lecturer } from "./lecturer"
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { mergeMap, map } from 'rxjs/operators';
-import * as XLSX from 'xlsx';
+import { DataStore } from "./data-store";
+import { Plottable } from "./plottable";
+import { Lecturer } from "./lecturer";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { mergeMap, map } from "rxjs/operators";
+import * as XLSX from "xlsx";
 import { plot } from "plotly.js";
 import { DataPoint } from "./data-point";
 import { Field } from "./field";
@@ -19,7 +19,7 @@ export class HTTPRequestor implements DataStore {
     console.log("Searching for instructor: " + name);
 
     // Pull up the FCQ site and print out the first form
-    return this.http.get('https://cors-anywhere.herokuapp.com/https://a2y9euj5ml.execute-api.us-east-2.amazonaws.com/prod/fcq-fetcher?instructor=' + name)
+    return this.http.get("https://cors-anywhere.herokuapp.com/https://a2y9euj5ml.execute-api.us-east-2.amazonaws.com/prod/fcq-fetcher?instructor=" + name) // tslint:disable-line max-line-length
       .pipe(mergeMap(
           data => this.getXLS(data as string)
         ));
@@ -27,21 +27,21 @@ export class HTTPRequestor implements DataStore {
   }
 
   private getXLS(url: string): Observable<Plottable[]> {
-    return this.http.get('https://cors-anywhere.herokuapp.com/' + url, { responseType: 'arraybuffer' })
+    return this.http.get("https://cors-anywhere.herokuapp.com/" + url, { responseType: "arraybuffer" })
       .pipe(map(
         data => this.parsePlottable(data)
       ));
   }
 
   private parsePlottable(raw): Plottable[] {
-    var binary = "";
-    var bytes = new Uint8Array(raw);
-    var length = bytes.byteLength;
-    for (var i = 0; i < length; i++) {
+    let binary = "";
+    let bytes = new Uint8Array(raw);
+    let length = bytes.byteLength;
+    for (let i = 0; i < length; i++) {
       binary += String.fromCharCode(bytes[i]);
     }
 
-    const wb: XLSX.WorkBook = XLSX.read(binary, { type: 'binary' });
+    const wb: XLSX.WorkBook = XLSX.read(binary, { type: "binary" });
     /* grab data sheet */
     const wsname: string = wb.SheetNames[1];
     const ws: XLSX.WorkSheet = wb.Sheets[wsname];
@@ -53,7 +53,7 @@ export class HTTPRequestor implements DataStore {
     let plottables: Map<string, Field[]> = new Map();
 
     // Interate over the entries, if field matches something we want then add it
-    for (var line in raw_data) {
+    for (let line in raw_data) {
 
       let term: string = raw_data[line]["Yearterm"];
       term = term.substr(0, 4) + "-0" + term.substr(4, 4); // Format YYYY-MM
@@ -74,7 +74,7 @@ export class HTTPRequestor implements DataStore {
         current[2].appendValue(instrAvai);
         current[3].appendValue(instrEffe);
         plottables.set(key, current);
-        
+
       } else {
         // Create
         let f1 = new Field("InstructorOverall");
@@ -85,7 +85,7 @@ export class HTTPRequestor implements DataStore {
         f3.setValues([instrAvai]);
         let f4 = new Field("InstrEffective");
         f4.setValues([instrEffe]);
-        
+
         let current: Field[] = [f1, f2, f3, f4];
         plottables.set(key, current);
 
@@ -94,10 +94,10 @@ export class HTTPRequestor implements DataStore {
 
     let lecturers: Lecturer[] = [];
 
-    plottables.forEach((fields, key, map) => {
+    plottables.forEach((fields, key) => {
       let lec: Lecturer = new Lecturer(key, fields);
       lecturers.push(lec);
-    })
+    });
 
     return lecturers;
   }
