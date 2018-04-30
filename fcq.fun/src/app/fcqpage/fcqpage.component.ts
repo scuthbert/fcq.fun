@@ -32,16 +32,16 @@ export class FCQPageComponent implements OnInit {
   public search(name: string): void {
     // TODO: Search for String
     this.query.instructor = name;
-    console.log(this.query.instructor);
     this.dataInterface.getPlottable(this.query.instructor).subscribe(data => {
       // Open ChartDisplay on this data
-
       let viewContainerRef = this.chartHost.viewContainerRef;
       viewContainerRef.clear();
 
       let factory = this.cmpFactResolve.resolveComponentFactory(ChartDisplayComponent);
-      let component = viewContainerRef.createComponent(factory);
-      component.instance.display(data[0]);
+      data.forEach(item => {
+        let component = viewContainerRef.createComponent(factory);
+        component.instance.display(item);
+      })
     });
 
   }

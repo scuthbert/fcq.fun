@@ -8,6 +8,7 @@ import * as XLSX from "xlsx";
 import { plot } from "plotly.js";
 import { DataPoint } from "./data-point";
 import { Field } from "./field";
+import { Course } from "./course";
 
 type AOA = any[][];
 
@@ -51,10 +52,10 @@ export class HTTPRequestor implements DataStore {
 
     // Make a map of professor names to plottables
     let plottables: Map<string, Field[]> = new Map();
+    let courses: Map<string, Field[]> = new Map();
 
     // Interate over the entries, if field matches something we want then add it
     for (let line in raw_data) {
-
       let term: string = raw_data[line]["Yearterm"];
       term = term.substr(0, 4) + "-0" + term.substr(4, 4); // Format YYYY-MM
 
@@ -63,6 +64,12 @@ export class HTTPRequestor implements DataStore {
       let instrResp: DataPoint = new DataPoint(raw_data[line]["InstrRespect"], term);
       let instrAvai: DataPoint = new DataPoint(raw_data[line]["Availability"], term);
       let instrEffe: DataPoint = new DataPoint(raw_data[line]["InstrEffective"], term);
+
+      let crseHMLen: DataPoint = new DataPoint(raw_data[line]["HowMuchLearned"], term);
+      let crsePriIt: DataPoint = new DataPoint(raw_data[line]["PriorInterest"], term);
+      let crseHrWek: DataPoint = new DataPoint(/* map from string raw_data[line]["HoursPerWkInclClass"] */ 3, term);
+      let crseOvera: DataPoint = new DataPoint(raw_data[line]["CourseOverall"], term);
+
 
       // Test if this lecturer already exists/if this class already exists
       let key = raw_data[line]["Instructor"];
@@ -77,25 +84,58 @@ export class HTTPRequestor implements DataStore {
 
       } else {
         // Create
-        let f1 = new Field("InstructorOverall");
+        let f1 = new Field("Instructor Overall");
         f1.setValues([instrOver]);
-        let f2 = new Field("InstrRespect");
+        let f2 = new Field("Instructor Respect");
         f2.setValues([instrResp]);
         let f3 = new Field("Availability");
         f3.setValues([instrAvai]);
-        let f4 = new Field("InstrEffective");
+        let f4 = new Field("Instructor Effectiveness");
         f4.setValues([instrEffe]);
 
         let current: Field[] = [f1, f2, f3, f4];
         plottables.set(key, current);
 
       }
+
+      // Now do the same for course
+      let crse = raw_data[line]["Fcqdept"] + raw_data[line]["Crse"]
+      if (courses.has(crse)) {
+        // Append
+        let current = courses.get(crse);
+        current[0].appendValue(crseHMLen);
+        current[1].appendValue(crsePriIt);
+        current[2].appendValue(crseHrWek);
+        current[3].appendValue(crseOvera);
+        courses.set(crse, current);
+
+      } else {
+        // Create
+        let f1 = new Field("How Much Learned");
+        f1.setValues([crseHMLen]);
+        let f2 = new Field("Prior Interest");
+        f2.setValues([instrResp]);
+        let f3 = new Field("Hours Per Week");
+        f3.setValues([instrAvai]);
+        let f4 = new Field("Course Overall");
+        f4.setValues([instrEffe]);
+
+        let current: Field[] = [f1, f2, f3, f4];
+        courses.set(crse, current);
+
+      }
     }
 
-    let lecturers: Lecturer[] = [];
+    let lecturers: Plottable[] = [];
 
     plottables.forEach((fields, key) => {
       let lec: Lecturer = new Lecturer(key, fields);
+      lecturers.push(lec);
+    });
+
+    // TODO: Check if search was for course
+    courses.forEach((fields, key) => {
+      let lec: Course = new Course(key, fields);
       lecturers.push(lec);
     });
 
