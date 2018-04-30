@@ -4,7 +4,7 @@ import { Lecturer } from "../lecturer";
 import { Plottable } from "../plottable";
 import { Query } from "../query";
 import { DataStore } from "../data-store";
-import { HTTPRequestor } from "../httprequestor";
+import { LocalDataCache } from "../local-data-cache";
 import { ChartDirective } from "../chart.directive";
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -51,7 +51,7 @@ export class FCQPageComponent implements OnInit {
               private fb: FormBuilder, 
               private cmpFactResolve: ComponentFactoryResolver, 
               private viewContainer: ViewContainerRef) {
-    this.dataInterface = new HTTPRequestor(http);
+    this.dataInterface = new LocalDataCache(http);
     this.query = new Query();
   }
 

@@ -29,17 +29,17 @@ export class ChartDisplayComponent implements OnChanges {
 
     let traces: {}[];
     this.currentFields.forEach(field => {
-      traces.push({
+      /*traces.push({
         name: field,
         mode: "lines+markers",
         type: "scatter",
         line: {shape: "spline"},
         x: data.getFieldData(field).map(point => point.getTerm()),
         y: data.getFieldData(field).map(point => point.getValue())
-      });
+      });*/
     });
 
-    Plotly.react(this.currentResult.getLabel(), traces);
+    //Plotly.react(this.currentResult.getLabel(), traces);
   }
 
   ngOnChanges(changes: SimpleChanges) {

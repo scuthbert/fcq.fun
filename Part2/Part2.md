@@ -4,7 +4,7 @@
 
 3. **Project Summary:** A CU faculty course questionnaire viewer with improved readability, focused mainly on graphs. Limited to Boulder campus, initially limited to College of Engineering results. 
 
-4. **Feature Summary:**
+4. **Project Requirements:**
 
    | ID     | Description                                                  | Implemented? |
    | ------ | ------------------------------------------------------------ | ------------ |
