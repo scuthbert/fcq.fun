@@ -1,18 +1,26 @@
 import { DataStore } from "./data-store";
 import { Plottable } from "./plottable";
+import { HTTPRequestor } from "./httprequestor";
+import { Observable } from "rxjs";
 
 export class LocalDataCache implements DataStore {
-  private localCache: {[key: string]: Plottable};
+  private plottables: Map<string, Plottable[]> = new Map();
+  private httpGetter: HTTPRequestor;
 
-  public getPlottable(name: string): Plottable[] {
-    let result: Plottable = this.localCache[name];
+  public getPlottable(name: string): Observable<Plottable[]> {
+    let result: Plottable = this.plottables[name];
     if (result == null) {
-      // Call HTTPRequestor
+      let observ =  this.httpGetter.getPlottable(name);
+      observ.subscribe(data => {
+        this.plottables[name] = data;
+      });
+      return observ;
+    } if (result != null) {
+      return Observable.of(this.plottables[name]);
     }
-    return null;
   }
 
-  public constructor() {
-
+  public constructor(http) {
+    this.httpGetter = new HTTPRequestor(http);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from "@angular/core";
+import { Component, OnInit, Input, OnChanges, AfterViewInit, SimpleChanges } from "@angular/core";
 import { Plottable } from "../plottable";
 import * as Plotly from "plotly.js";
 
@@ -7,9 +7,11 @@ import * as Plotly from "plotly.js";
   templateUrl: "./chart-display.component.html",
   styleUrls: ["./chart-display.component.css"]
 })
-export class ChartDisplayComponent implements OnChanges {
-  @Input() private currentFields: string[];
+
+export class ChartDisplayComponent implements OnChanges, AfterViewInit {
   @Input() private currentResult: Plottable;
+  private currentFields: string[];
+  private viewReady = false;
   constructor() { }
 
   public updateFields(fields: string[]): void {
@@ -21,22 +23,50 @@ export class ChartDisplayComponent implements OnChanges {
   }
 
   public display(data: Plottable): void {
-    let traces: {}[];
-    this.currentFields.forEach(field => {
-      traces.push({
+    this.currentResult = data;
+    this.currentFields = data.getFieldList().map((value) => value.getName());
+
+    let traces: {}[] = this.currentFields.map(field => ({
         name: field,
-        mode: "lines+markers",
+        mode: "markers",
         type: "scatter",
         line: {shape: "spline"},
         x: data.getFieldData(field).map(point => point.getTerm()),
         y: data.getFieldData(field).map(point => point.getValue())
-      });
-    });
+      }
+    ));
 
-    Plotly.react(this.currentResult.getLabel(), traces);
+    let layout = {
+      title: `FCQ results for ${data.getLabel()}`,
+      xaxis: {
+        title: "Semester (Starting Month)",
+        titlefont: {
+          family: "Courier New, monospace",
+          size: 18,
+          color: "#7f7f7f"
+        }
+      },
+      yaxis: {
+        title: "FCQ Score",
+        titlefont: {
+          family: "Courier New, monospace",
+          size: 18,
+          color: "#7f7f7f"
+        }
+      }
+    };
+
+    if (this.viewReady) {
+      Plotly.react(this.currentResult.getLabel(), traces, layout, {displayModeBar: false});
+    }
   }
 
   ngOnChanges(changes: SimpleChanges) {
+    this.display(this.currentResult);
+  }
+
+  ngAfterViewInit() {
+    this.viewReady = true;
     this.display(this.currentResult);
   }
 
