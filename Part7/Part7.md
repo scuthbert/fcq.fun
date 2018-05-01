@@ -5,6 +5,7 @@
 3. **Project Summary:** A CU faculty course questionnaire viewer with improved readability, focused mainly on graphs. Limited to Boulder campus, initially limited to College of Engineering results.
 
 4. **Features Implemented:**
+
    | ID     | Description                                                  |
    | ------ | ------------------------------------------------------------ |
    | US-01  | As a user, I can search by lecturer name in the format (Lastname, Firstname) to see results of that professors FCQ results. |
@@ -15,6 +16,7 @@
    | NFR-03 | <u>Legal:</u> All code will be protected under the GNU-General Purpose license, hosted as LICENSE in the GitHub repository. |
 
 5. **Features Implemented:**
+
   | ID     | Description                                                  |
   | ------ | ------------------------------------------------------------ |
   | US-02  | As a user, I can search by course code to see results of that course's FCQ results. |
