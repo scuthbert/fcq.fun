@@ -26,9 +26,15 @@
 
 7. **Current Class Diagram:**
 
+   ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part7/ClassDiagramComplete.svg?sanitize=true)
+
 8. **Implemented Design Patterns - Proxy:**
 
-9. **Implemented Design Patterns - Strategy?:**
+   ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part7/Proxy.svg?sanitize=true)
+
+9. **Implemented Design Patterns - Strategy:**
+
+   ![fcq.fun Class Diagram](https://raw.githubusercontent.com/scuthbert/fcq.fun/master/Part7/Strategy.svg?sanitize=true)
 
 10. **Takeaways:**
 

@@ -17,6 +17,9 @@ export class HTTPRequestor implements DataStore {
   constructor(private http: HttpClient) { }
 
   public getPlottable(name: string): Observable<Plottable[]> {
+    // Tell the user to wait.
+    alert("Searching! This could take a minute...");
+
     // Regex match - Is term a professor or class code?
     if(name.match(/^[a-z]{4}\d{4}$/i)) {
       this.courseSearch = true;
@@ -33,6 +36,7 @@ export class HTTPRequestor implements DataStore {
           data => this.getXLS(data as string)
         ));
       }
+      
   }
 
   private getXLS(url: string): Observable<Plottable[]> {
