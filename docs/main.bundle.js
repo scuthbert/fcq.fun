@@ -140,7 +140,8 @@ var ChartDisplayComponent = /** @class */ (function () {
                     family: "Courier New, monospace",
                     size: 18,
                     color: "#7f7f7f"
-                }
+                },
+                range: [1, 6]
             }
         };
         if (this.viewReady) {
@@ -281,7 +282,7 @@ var DataPoint = /** @class */ (function () {
 /***/ "./src/app/fcqpage/fcqpage.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: 100%;\n    height: 100%;\n}\n\n#searchContainer {\n    /* width: 500px; */\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n\n#chartList {\n    max-height: 100vh;\n    overflow-y: auto;\n}"
+module.exports = ":host {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: 100%;\n    height: 100%;\n}\n\n#searchContainer {\n    /* width: 500px; */\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n\n#chartList {\n    max-height: 100vh;\n    overflow-y: auto;\n}"
 
 /***/ }),
 
