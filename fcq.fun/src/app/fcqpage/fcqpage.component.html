@@ -1,4 +1,7 @@
-<input #searchBox (keyup.enter)="search(searchBox.value)">
-<button (click)="search(searchBox.value)"> SEARCH </button>
-
-<ng-template appChartHost> </ng-template>
+<div id="searchContainer">
+    <input #searchBox (keyup.enter)="search(searchBox.value)">
+    <button (click)="search(searchBox.value)"> SEARCH </button>
+</div>
+<div id="chartList">
+    <ng-template appChartHost></ng-template>
+</div>
