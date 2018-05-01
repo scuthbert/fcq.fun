@@ -36,7 +36,7 @@ export class ChartDisplayComponent implements OnChanges, AfterViewInit {
       }
     ));
 
-    let layout = {
+    let layout: Partial<Plotly.Layout> = {
       title: `FCQ results for ${data.getLabel()}`,
       xaxis: {
         title: "Semester (Starting Month)",
@@ -52,7 +52,8 @@ export class ChartDisplayComponent implements OnChanges, AfterViewInit {
           family: "Courier New, monospace",
           size: 18,
           color: "#7f7f7f"
-        }
+        },
+        range: [1, 6]
       }
     };
 
