@@ -7,7 +7,7 @@ export class Course implements Plottable {
     private valid: boolean;
 
     public constructor(courseCode: string, fields: Field[]) {
-        if (/[A-Z]{4}\d{4}/.test(courseCode)) {
+        if (/[A-Z]{2,4}\d{4}/.test(courseCode)) {
             this.courseCode = courseCode;
             this.fieldList = fields;
         } else {
