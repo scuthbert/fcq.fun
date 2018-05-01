@@ -213,7 +213,7 @@ var ChartDirective = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Course; });
 var Course = /** @class */ (function () {
     function Course(courseCode, fields) {
-        if (/[A-Z]{4}\d{4}/.test(courseCode)) {
+        if (/[A-Z]{2,4}\d{4}/.test(courseCode)) {
             this.courseCode = courseCode;
             this.fieldList = fields;
         }
@@ -281,14 +281,14 @@ var DataPoint = /** @class */ (function () {
 /***/ "./src/app/fcqpage/fcqpage.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ":host {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    width: 100%;\n    height: 100%;\n}\n\n#searchContainer {\n    /* width: 500px; */\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n\n#chartList {\n    max-height: 100vh;\n    overflow-y: auto;\n}"
 
 /***/ }),
 
 /***/ "./src/app/fcqpage/fcqpage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<input #searchBox (keyup.enter)=\"search(searchBox.value)\">\n<button (click)=\"search(searchBox.value)\"> SEARCH </button>\n\n<ng-template appChartHost> </ng-template>\n"
+module.exports = "<div id=\"searchContainer\">\n    <input #searchBox (keyup.enter)=\"search(searchBox.value)\">\n    <button (click)=\"search(searchBox.value)\"> SEARCH </button>\n</div>\n<div id=\"chartList\">\n    <ng-template appChartHost></ng-template>\n</div>"
 
 /***/ }),
 
@@ -431,6 +431,8 @@ var HTTPRequestor = /** @class */ (function () {
     }
     HTTPRequestor.prototype.getPlottable = function (name) {
         var _this = this;
+        // Tell the user to wait.
+        alert("Searching! This could take a minute...");
         // Regex match - Is term a professor or class code?
         if (name.match(/^[a-z]{4}\d{4}$/i)) {
             this.courseSearch = true;
